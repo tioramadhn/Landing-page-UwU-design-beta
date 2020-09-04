@@ -1,0 +1,162 @@
+/*Font*/
+
+@font-face{
+	font-family: 'magnolia_sky';
+	src: url('../font/magnolia_sky.ttf') format('truetype');
+}
+h1{
+	color: #292929;
+}
+/*Style utama*/
+body{
+	/*background-color: black;*/
+	font-family: arial, sans-serif;	
+}
+.header{
+	animation: animasi 1s forwards ;
+}
+.button, .judul{
+	animation: animasi 1s forwards ;
+}
+.vector{
+	animation: animasiimg 1s forwards;
+}
+.balon{
+	position: absolute;
+	background-attachment: fixed;
+	top: -50px;
+	left: -50px;
+	animation: animasibola 6s ease forwards;
+	z-index: -9999px;
+	max-height:100%; 
+}
+.container{
+	width: 1112px;
+	margin:auto;
+	
+	position: relative;
+	margin-top: 5px;
+}
+.logo{
+	width: 85px;
+	float: left;
+}
+.clear{
+	clear: left;
+}
+.logo-bar h1{
+	font-size:45px;
+	float: left;
+	line-height: 89px;
+	color: #707070;
+}
+ul{
+	text-align: right;
+}
+.menu-bar a{
+	font-size: 21px;
+	text-decoration: none;
+	float: left;
+	margin-top: 42px;	
+	margin-left: 10px;
+	color: #707070;
+	transition: .3s;
+}
+.menu-bar a:hover{
+	border-bottom: 2px solid #707070;
+}
+
+li{
+	display: inline-block;
+}
+.ig{
+	width: 561px;
+	height: 558px;
+	margin-left: 427px;
+	float: left;
+	position: absolute;
+	top:100px;
+	left: 100px;
+	opacity: 1;
+	animation: animasislide 3s ease forwards ;
+
+}
+
+.button{
+	padding-left: 10px; 
+	float:left;
+}
+.judul, .button{
+	margin-left: 9px;
+}
+.judul{
+	margin-top: 146px;margin-bottom: 25px;
+}
+.judul h1{
+	font-family: magnolia_sky;
+	font-size: 56px;
+	margin-bottom: 25px;
+}
+.judul p{
+	font-size: 29px;
+	color:#707070;
+}
+.add, .more{
+	padding: 5px;
+	text-decoration: none;
+	color:#F58F7D; 
+	font-size: 25px;
+	border: 2px solid #F58F7D;
+}
+
+.more{
+	background-color: #F58F7D;
+	color: white; 
+}
+.add{
+	margin-right: 5px;
+}
+.button:hover .add{
+	transform: scale(2);
+}
+@keyframes animasibola{
+	0%{
+		transform: scale(0)rotate(0);
+		opacity:0;
+	}
+	30%{
+		transform:scale(1) rotate(360deg) translate(500px,100px) ;
+	}
+	50%{
+		transform:scale(1.5) rotate(360deg) translate(100px,100px) ;
+	}
+	80%{
+		transform:scale(2) rotate(360deg) translate(500px,100px) ;
+	}
+	100%{
+		transform: scale(2)rotate(360deg) translate(400px,100px);
+	}
+}
+@keyframes animasislide{
+	0%{
+		transform: scale(0) translate(0,0);
+	}
+	30%{
+		transform: scale(1) translate(2px, 2px);
+	}
+	80%{
+		transform: scale(0.9999) translate(0px, 2px);
+	}
+	100%{
+		transform: scale(1) translate(-2px, -2px);
+	}
+}
+@keyframes animasi{
+	0%{
+		transform: scale(0) translate(0,10px);
+		opacity: 1;
+	}
+	100%{
+		transform: scale(1) translate(0,0);
+	}
+}
